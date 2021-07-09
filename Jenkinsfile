@@ -22,7 +22,7 @@ pipeline{
 		stage("build"){
             steps {	
 				dir(env.WORKSPACE+"/test_android"){
-					bat 'gradlew clean assembleDebug'	
+					bat 'gradlew clean assembleDebug --stacktrace --info'	
 				}
 			}
 		}
