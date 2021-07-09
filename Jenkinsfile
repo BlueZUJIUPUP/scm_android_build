@@ -20,5 +20,6 @@ pipeline{
 					bat 'gradlew clean assembleDebug'	
 				}
 			}
+		}
 	}
 }
