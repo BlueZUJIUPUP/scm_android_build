@@ -16,7 +16,7 @@ pipeline{
 			}
 		stage("build"){
             steps {	
-				bat 'cd ./test_android/'
+				cd test_android
 				bat 'gradlew clean assembleDebug'	
 				}
 			}
