@@ -14,16 +14,13 @@ pipeline{
         //build
         stage("build"){
             steps {	
-				./gradlew clean assembleDebug	
+				gradlew clean assembleDebug	
             }
         }
 		//sonar检查
 		stage("sonar检查"){
             steps {
-				./gradlew sonarqube \
-				  -Dsonar.projectKey=scm_jenkins_file \
-				  -Dsonar.host.url=http://192.168.171.128:9000 \
-				  -Dsonar.login=8dfbed8f376f2bc4a101c33aec0d53bf43cbc053								
+				gradlew sonarqube -Dsonar.projectKey=scm_jenkins_file -Dsonar.host.url=http://192.168.171.128:9000 -Dsonar.login=8dfbed8f376f2bc4a101c33aec0d53bf43cbc053								
             }
         }
 		//test
