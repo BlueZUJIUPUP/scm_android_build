@@ -17,7 +17,7 @@ pipeline{
 		stage("build"){
             steps {	
 				powershell 'cd test_android'
-				bat '.\test_android\gradlew clean assembleDebug'	
+				bat './test_android/gradlew clean assembleDebug'	
 				}
 			}
 	}
