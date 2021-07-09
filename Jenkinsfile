@@ -29,7 +29,7 @@ pipeline{
 		stage("sonar"){
             steps {
 				dir(env.WORKSPACE+"/test_android"){
-					bat "gradlew sonarqube -Dsonar.projectKey='scm_jenkins_file' -Dsonar.host.url={env.sonarqube_servers} -Dsonar.login=83a42d8762d945d38427a4ddf9bb9dc8522acf2c"							
+					bat "gradlew sonarqube -Dsonar.projectKey=scm_jenkins_file -Dsonar.host.url=http://192.168.171.128:9000 -Dsonar.login=83a42d8762d945d38427a4ddf9bb9dc8522acf2c"							
 				}
 			}
         }
