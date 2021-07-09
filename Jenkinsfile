@@ -21,7 +21,7 @@ pipeline{
 		stage("sonar检查"){
             steps {
 				gradlew sonarqube \
-  -Dsonar.projectKey=scm_jenkins_file \
+  -Dsonar.projectKey='scm_jenkins_file' \
   -Dsonar.host.url={sonarqube_servers} \
   -Dsonar.login={test01}							
             }
