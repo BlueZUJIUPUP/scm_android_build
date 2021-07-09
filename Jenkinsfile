@@ -1,4 +1,4 @@
-env.WORKSPACE = "D:\/test_jenkins\/test"
+env.WORKSPACE = "D:/test_jenkins/test"
 
 pipeline{
     agent any
