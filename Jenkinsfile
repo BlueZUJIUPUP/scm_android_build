@@ -14,7 +14,7 @@ pipeline{
         //build
         stage("build"){
             steps {	
-				gradlew clean assembleDebug	
+				sh 'gradlew clean assembleDebug'	
             }
         }
 		//sonar检查
